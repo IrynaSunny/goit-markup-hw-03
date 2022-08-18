@@ -50,6 +50,8 @@ color:var(--main-font-color);
 }
 .main-title{
     color: var(--main-white-color);
+    font-size: 44px;
+    font-weight: 900;
 }
 .title-button{
     color: var(--main-white-color);
