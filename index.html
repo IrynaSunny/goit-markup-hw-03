@@ -4,15 +4,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
       rel="stylesheet"
     />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap"
       rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
     />
+
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -21,7 +20,7 @@
   </head>
 
   <body>
-    <header>
+    <header class="header-line">
       <div class="container header-flex">
         <a class="logo" href="index.html">
           <span class="blue-text">Web</span>Studio
@@ -29,18 +28,24 @@
 
         <nav class="nav">
           <ul class="remove-dots display-flex">
-            <li><a class="nav-link" href="#"> Студія</a></li>
-            <li><a class="nav-link" href="porfolio.html">Портфоліо</a></li>
-            <li><a class="nav-link" href="#">Контакти</a></li>
+            <li class="nav-location">
+              <a class="nav-link studio-currant" href="#"> Студія</a>
+            </li>
+            <li class="nav-location">
+              <a class="nav-link" href="porfolio.html">Портфоліо</a>
+            </li>
+            <li class="nav-location">
+              <a class="nav-link" href="#">Контакти</a>
+            </li>
           </ul>
         </nav>
         <ul class="remove-dots info-flex">
-          <li>
+          <li class="info-location">
             <a class="info-data" href="mailto:info@devstudio.com">
               info@devstudio.com</a
             >
           </li>
-          <li>
+          <li class="info-location">
             <a class="info-data" href="tel:+380961111111">+38 096 111 11 11</a>
           </li>
         </ul>
@@ -48,7 +53,7 @@
     </header>
 
     <main>
-      <section class="background section">
+      <section class="background section-block">
         <div class="container">
           <h1 class="main-title place">Ефективні рішення для вашого бізнесу</h1>
           <button class="title-button place-button" type="button">
@@ -62,27 +67,27 @@
           <h2 hidden>особливості</h2>
           <ul class="list flex">
             <li class="size-li">
-              <h3 class="small-title">УВАГА ДО ДЕТАЛЕЙ</h3>
+              <h3 class="small-title">Увага до деталей</h3>
               <p class="s-title-description">
                 Ідейні міркування, і навіть початок повсякденної роботи з
                 формування позиції.
               </p>
             </li>
             <li class="size-li">
-              <h3 class="small-title">ПУНКТУАЛЬНІСТЬ</h3>
+              <h3 class="small-title">Пунктуальність</h3>
               <p class="s-title-description">
                 Завдання організації, особливо рамки і місце навчання кадрів
                 тягне у себе.
               </p>
             </li>
             <li class="size-li">
-              <h3 class="small-title">ПЛАНУВАННЯ</h3>
+              <h3 class="small-title">Планування</h3>
               <p class="s-title-description">
                 Так само консультація з широким активом значною мірою зумовлює.
               </p>
             </li>
             <li class="size-li">
-              <h3 class="small-title">СУЧАСНІ ТЕХНОЛОГІЇ</h3>
+              <h3 class="small-title">Сучасні технології</h3>
               <p class="s-title-description">
                 Значимість цих проблем настільки очевидна, що реалізація
                 планових завдань.
@@ -92,11 +97,11 @@
         </div>
       </section>
 
-      <section class="section">
+      <section class="our-work">
         <div class="container">
           <h2 class="big-title">Чим ми займаємося</h2>
           <ul class="list flex">
-            <li>
+            <li class="work-types">
               <img
                 height="294px"
                 width="370px"
@@ -104,7 +109,7 @@
                 alt="a man works on the laptop"
               />
             </li>
-            <li>
+            <li class="work-types">
               <img
                 height="294px"
                 width="370px"
@@ -112,12 +117,12 @@
                 alt="a man compares tables"
               />
             </li>
-            <li>
+            <li class="work-types">
               <img
                 height="294px"
                 width="370px"
                 src="./images/gradiant.jpg"
-                alt=" a man chooses the color on a gradiant"
+                alt="a man chooses the color on a gradiant"
               />
             </li>
           </ul>
@@ -128,7 +133,7 @@
         <div class="container">
           <h2 class="big-title">Наша команда</h2>
 
-          <ul class="list team-list flex">
+          <ul class="list flex">
             <li class="text-li">
               <img
                 width="270px"
@@ -136,9 +141,10 @@
                 src="images/product-designer-squoosh.jpg"
                 alt="product-designer"
               />
-
-              <h3>Ігор Дем'яненко</h3>
-              <p lang="en">Product Designer</p>
+              <div class="team-cards">
+                <h3 class="team-list-title">Ігор Дем'яненко</h3>
+                <p class="team-list-text" lang="en">Product Designer</p>
+              </div>
             </li>
 
             <li class="text-li">
@@ -148,8 +154,11 @@
                 src="images/frontent-developer-squoosh.jpg"
                 alt="frontent-developer"
               />
-              <h3>Ольга Рєпіна</h3>
-              <p lang="en">Frontend Developer</p>
+
+              <div class="team-cards">
+                <h3 class="team-list-title">Ольга Рєпіна</h3>
+                <p class="team-list-text" lang="en">Frontend Developer</p>
+              </div>
             </li>
 
             <li class="text-li">
@@ -159,8 +168,10 @@
                 src="images/marketing-squoosh.jpg"
                 alt="marketing"
               />
-              <h3>Микола Тарасов</h3>
-              <p lang="en">Marketing</p>
+              <div class="team-cards">
+                <h3 class="team-list-title">Микола Тарасов</h3>
+                <p class="team-list-text" lang="en">Marketing</p>
+              </div>
             </li>
 
             <li class="text-li">
@@ -170,9 +181,10 @@
                 src="images/ui-designer-squo.jpg"
                 alt="ui-designer"
               />
-
-              <h3>Михайло Єрмаков</h3>
-              <p lang="en">UI Designer</p>
+              <div class="team-cards">
+                <h3 class="team-list-title">Михайло Єрмаков</h3>
+                <p class="team-list-text" lang="en">UI Designer</p>
+              </div>
             </li>
           </ul>
         </div>
@@ -185,20 +197,20 @@
           ><span class="blue-text">Web</span>Studio</a
         >
         <address>
-          <ul class="remove-dots">
-            <li>
+          <ul class="footer-no-style">
+            <li class="footer-distance">
               <a
                 class="footer-address"
                 href="https://goo.gl/maps/fxkEnHUCGzXbZ7778"
                 >м. Київ, пр-т Лесі Українки, 26</a
               >
             </li>
-            <li>
+            <li class="footer-distance">
               <a class="footer-text" href="mailto:info@devstudio.com">
                 info@devstudio.com</a
               >
             </li>
-            <li>
+            <li class="footer-distance">
               <a class="footer-text" href="tel:+380961111111"
                 >+38 096 111 11 11</a
               >

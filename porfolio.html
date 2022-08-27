@@ -1,15 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uk">
   <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
+    />
+
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio</title>
     <link rel="stylesheet" href="./css/style.css" />
+    <title>Портфоліо</title>
   </head>
 
   <body>
-    <header>
+    <header class="header-line">
       <div class="container header-flex">
         <a class="logo" href="index.html">
           <span class="blue-text">Web</span>Studio
@@ -17,18 +28,26 @@
 
         <nav class="nav">
           <ul class="remove-dots display-flex">
-            <li><a class="nav-link" href="#"> Студія</a></li>
-            <li><a class="nav-link" href="porfolio.html">Портфоліо</a></li>
-            <li><a class="nav-link" href="#">Контакти</a></li>
+            <li class="nav-location">
+              <a class="nav-link" href="index.html"> Студія</a>
+            </li>
+            <li class="nav-location">
+              <a class="nav-link studio-currant" href="porfolio.html"
+                >Портфоліо</a
+              >
+            </li>
+            <li class="nav-location">
+              <a class="nav-link" href="#">Контакти</a>
+            </li>
           </ul>
         </nav>
         <ul class="remove-dots info-flex">
-          <li>
+          <li class="info-location">
             <a class="info-data" href="mailto:info@devstudio.com">
               info@devstudio.com</a
             >
           </li>
-          <li>
+          <li class="info-location">
             <a class="info-data" href="tel:+380961111111">+38 096 111 11 11</a>
           </li>
         </ul>
@@ -36,109 +55,144 @@
     </header>
     <main>
       <section class="section">
-        <div class="portfolio-section-container">
+        <div class="container">
+          <h2 hidden>Приклади роботи</h2>
+
+          <div class="portfolio-section-container">
+            <ul class="list flex list-size">
+              <li class="list-not-last">
+                <button type="button" class="departments">Усі</button>
+              </li>
+              <li class="list-not-last">
+                <button type="button" class="departments">Додатки</button>
+              </li>
+              <li class="list-not-last">
+                <button type="button" class="departments">Веб-сайти</button>
+              </li>
+              <li class="list-not-last">
+                <button type="button" class="departments">Дизайн</button>
+              </li>
+              <li class="list-not-last">
+                <button type="button" class="departments">Маркетинг</button>
+              </li>
+            </ul>
+          </div>
+
           <ul class="list flex">
-            <li><button type="button" class="departments">Усі</button></li>
-            <li><button type="button" class="departments">Додатки</button></li>
-            <li>
-              <button type="button" class="departments">Веб-сайти</button>
-            </li>
-            <li><button type="button" class="departments">Дизайн</button></li>
-            <li>
-              <button type="button" class="departments">Маркетинг</button>
-            </li>
-          </ul>
-        </div>
-      </section>
-
-      <section class="section">
-        <div class="container">
-          <ul class="list flex portfolio-list">
-            <li>
-              <img src="images/portfolio/screen.jpg" alt="" />
-              <h3>Технокряк</h3>
-              <p>Веб-сайт</p>
+            <li class="list-margin">
+              <img
+                src="images/portfolio/screen.jpg"
+                alt="website on the screen"
+              />
+              <div class="list-border-padding">
+                <h3 class="title-portfolio">Технокряк</h3>
+                <p class="description-portfolio">Веб-сайт</p>
+              </div>
             </li>
 
-            <li>
-              <img src="images/portfolio/poster.jpg" alt="" />
-              <h3>Постер New Orlean vs Golden Star</h3>
-              <p>Дизайн</p>
-            </li>
-            <li>
-              <img src="images/portfolio/seafood.jpg" alt="" />
-              <h3>Ресторан Seafood</h3>
-              <p>Додаток</p>
-            </li>
-          </ul>
-        </div>
-      </section>
-
-      <section class="section">
-        <div class="container">
-          <ul class="list flex portfolio-list">
-            <li>
-              <img src="images/portfolio/headphones.jpg" alt="" />
-              <h3>Проєкт Prime</h3>
-              <p>Маркетинг</p>
-            </li>
-            <li>
-              <img src="images/portfolio/boxes.jpg" alt="" />
-              <h3>Проєкт Boxes</h3>
-              <p>Додаток</p>
+            <li class="list-margin">
+              <img src="images/portfolio/poster.jpg" alt="a poster of design" />
+              <div class="list-border-padding">
+                <h3 class="title-portfolio">
+                  Постер <span lang="en"> New Orlean vs Golden Star</span>
+                </h3>
+                <p class="description-portfolio">Дизайн</p>
+              </div>
             </li>
 
-            <li>
-              <img src="images/portfolio/monitor.jpg" alt="" />
-              <h3>Inspiration has no Borders</h3>
-              <p>Веб-сайт</p>
+            <li class="list-margin">
+              <img
+                src="images/portfolio/seafood.jpg"
+                alt="seafood's restaurant"
+              />
+              <div class="list-border-padding">
+                <h3 class="title-portfolio">
+                  Ресторан <span lang="en"> Seafood</span>
+                </h3>
+                <p class="description-portfolio">Додаток</p>
+              </div>
             </li>
-          </ul>
-        </div>
-      </section>
+            <li class="list-margin">
+              <img
+                src="images/portfolio/headphones.jpg"
+                alt="headphones-marketing"
+              />
+              <div class="list-border-padding">
+                <h3 class="title-portfolio">
+                  Проєкт<span lang="en">Prime</span>
+                </h3>
+                <p class="description-portfolio">Маркетинг</p>
+              </div>
+            </li>
+            <li class="list-margin">
+              <img src="images/portfolio/boxes.jpg" alt="extra project-boxes" />
+              <div class="list-border-padding">
+                <h3 class="title-portfolio">
+                  Проєкт<span lang="en">Boxes</span>
+                </h3>
+                <p class="description-portfolio">Додаток</p>
+              </div>
+            </li>
 
-      <section class="section">
-        <div class="container">
-          <ul class="list flex portfolio-list">
-            <li>
-              <img src="images/portfolio/magazine.jpg" alt="" />
-              <h3>Видання Limited Edition</h3>
-              <p>Дизайн</p>
+            <li class="list-margin">
+              <img src="images/portfolio/monitor.jpg" alt="website-monitor" />
+              <div class="list-border-padding">
+                <h3 class="title-portfolio" lang="en">
+                  Inspiration has no Borders
+                </h3>
+                <p class="description-portfolio">Веб-сайт</p>
+              </div>
             </li>
-            <li>
-              <img src="images/portfolio/tag.jpg" alt="" />
-              <h3>Проєкт LAB</h3>
-              <p>Маркетинг</p>
+            <li class="list-margin">
+              <img src="images/portfolio/magazine.jpg" alt="magazine-design" />
+              <div class="list-border-padding">
+                <h3 class="title-portfolio">
+                  Видання <span lang="en">Limited Edition</span>
+                </h3>
+                <p>Дизайн</p>
+              </div>
             </li>
-            <li>
-              <img src="images/portfolio/work.jpg" alt="" />
-              <h3>Growing Business</h3>
-              <p>Додаток</p>
+            <li class="list-margin">
+              <img src="images/portfolio/tag.jpg" alt="portfolio-marketing" />
+              <div class="list-border-padding">
+                <h3 class="title-portfolio" class="title-portfolio">
+                  Проєкт <span lang="en">LAB</span>
+                </h3>
+                <p class="description-portfolio">Маркетинг</p>
+              </div>
+            </li>
+            <li class="list-margin">
+              <img src="images/portfolio/work.jpg" alt="portfolio-addition" />
+              <div class="list-border-padding">
+                <h3 class="title-portfolio" lang="en">Growing Business</h3>
+                <p class="description-portfolio">Додаток</p>
+              </div>
             </li>
           </ul>
         </div>
       </section>
     </main>
+
     <footer class="background footer-padding">
       <div class="container">
         <a class="footer-logo" lang="en" href="#"
           ><span class="blue-text">Web</span>Studio</a
         >
         <address>
-          <ul class="remove-dots">
-            <li>
+          <ul class="footer-no-style">
+            <li class="footer-distance">
               <a
                 class="footer-address"
                 href="https://goo.gl/maps/fxkEnHUCGzXbZ7778"
                 >м. Київ, пр-т Лесі Українки, 26</a
               >
             </li>
-            <li>
+            <li class="footer-distance">
               <a class="footer-text" href="mailto:info@devstudio.com">
                 info@devstudio.com</a
               >
             </li>
-            <li>
+            <li class="footer-distance">
               <a class="footer-text" href="tel:+380961111111"
                 >+38 096 111 11 11</a
               >
